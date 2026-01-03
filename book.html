@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="monsterbestiary.css">
+	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+	<title>Pixel Monster Bestiary - Book</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Pixel, Pixal, Pixel art, Creatures, Monsters, Monster book, Book, Bestiary">
+	<meta name="description" content="Read a book filled with the images, names, and descriptions of a collection
+	of pixel-art monsters!">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+<style>
+
+	p { padding: 0;
+		margin: 0;
+	}
+
+	#background { display: grid;
+		grid-template-areas: 'idnumber desctitle'
+					'img description'
+					'paragraph description'
+					'spacer spacer';
+		background-image: url(img/bookback.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		width: 814px;
+		height: 576px;
+	}
+
+	#backcontainer { display: flex;
+		justify-content: space-around;
+	}
+
+	#background img { grid-area: img;
+		position: relative;
+		left: 34%;
+		top: 0px;
+		margin-top: 0px;
+		margin-bottom: 48px;
+		border: none;
+	}
+
+	.idnumber { grid-area: idnumber;
+		text-align: center;
+		display: none;
+	}
+
+	#paragraph { grid-area: paragraph;
+		font-size: 1.8em;
+		text-align: center;
+		margin-left: 58px;
+		margin-bottom: 32px;
+	}
+
+	#desctitle { grid-area: desctitle;
+		text-align: center;
+		margin-top: 8%;
+	}
+
+	#description { grid-area: description;
+		
+		padding: 0 15% 0 10%;
+		margin-top: 32px;
+		max-width: 244px;
+		font-size: 1.4em;
+		margin-left: 64px;
+	}
+
+	#descriptionparagraph { color: #706850;
+	}
+
+	.descriptiontext { 
+	}
+
+	.spacer { 
+	}
+
+	@media (max-width: 940px) {
+
+		#background { display: grid;
+			grid-template-areas: 'idnumber'
+					'img'
+					'paragraph'
+					'description'
+					'spacer'
+					'spacer';
+			background-image: url(img/bookbackmobile.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			max-width: 440px;
+			height: 960px;
+		}
+
+		#background img { grid-area: img;
+			position: relative;
+			left: 28%;
+			top: 0px;
+			margin-top: 0px;
+			margin-bottom: 48px;
+			border: none;
+		}
+
+		#paragraph { grid-area: paragraph;
+			font-size: 1.8em;
+			text-align: center;
+			margin-left: 10px;
+			margin-bottom: 100px;
+		}
+
+		#description { grid-area: description;
+		
+			padding: 0 15% 0 10%;
+			margin-top: -50px;
+			max-width: 244px;
+			font-size: 1.4em;
+			margin-left: 64px;
+		}
+
+		#desctitle { display: none;
+		}
+
+		#arrowtext { display: none;
+		}
+	}
+	
+
+</style>
+
+</head>
+
+<body>
+
+		<header>
+			<a style="text-decoration:none;" href="index.html"><h1>Pixel Monster Bestiary</h1></a>
+		</header>
+		
+		<div id="wrapper">
+
+		<nav>
+			<div id="navsetup">
+			<a href="index.html">HOME</a>
+			<a href="book.html">BOOK</a>
+			<a href="images.html">IMAGES</a>
+			<a href="sounds.html">SOUNDS</a>
+			<a href="info.html">ABOUT</a></div>
+		</nav>
+
+		<main>
+			<div style="text-align:center; padding-top: 48px; font-size:1.2em;">
+				<noscript>This page will not function correctly without Javascript!</noscript>
+			</div>
+
+			<h1 style="background-color: #B0B090; padding: 30px 0; font-weight: bold; font-size: 2.5em;
+			border-style: solid; border-width: 4px 0 8px 0; border-color: #706850;">DESCRIPTION <a onclick="FoundSecret()">BOOK</a></h1>
+
+			<div id=backcontainer style="margin-right:10px;">
+			<div class="container">
+			<div id=background>
+<!--Monster number-->
+				<div id="idnumber">
+					<p id="id" style="font-size:1.7em;color:#706850;
+					margin-top: 48px; margin-left: 48px;">ID</p>
+				</div>
+<!--Top description text-->
+				<div id="desctitle" style="margin: 0; padding:0; margin-top: 48px;">
+					<p style="font-weight: bold; font-size:1.7em; margin-top:3%; color:#706850;">Description:</p>
+				</div>
+<!--Monster images-->
+				<div id="img">
+					<div class="mySlides"><img src="img/bookmonsters/sprite_00.png" style="width:192px" alt="Volcano man without a head"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_01.png" style="width:192px" alt="Massive spiky tortoise"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_02.png" style="width:192px" alt="Tree Spider"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_03.png" style="width:192px" alt="Humanoid rabbit"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_04.png" style="width:192px" alt="Flower dinosaur"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_05.png" style="width:192px" alt="Carrot thug"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_06.png" style="width:192px" alt="Skeleton with two swords"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_07.png" style="width:192px" alt="Bird with a heart on its head"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_08.png" style="width:192px" alt="Floating grass-patch"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_09.png" style="width:192px" alt="Giant yeti"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_10.png" style="width:192px" alt="Shadow holding a book"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_11.png" style="width:192px" alt="Goopi clay head with fists"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_12.png" style="width:192px" alt="Sword in a evil looking stone"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_13.png" style="width:192px" alt="Raptor-like gargoyle"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_14.png" style="width:192px" alt="Buff lobster man"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_15.png" style="width:192px" alt="Hovering bee guard"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_16.png" style="width:192px" alt="Baby yeti"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_17.png" style="width:192px" alt="Candelabra with a face"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_18.png" style="width:192px" alt="Spiny turtle with long legs"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_19.png" style="width:192px" alt="Brain-like tree spider"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_20.png" style="width:192px" alt="Wrestler with a executioners hood"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_21.png" style="width:192px" alt="Little innocent-looking bug"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_22.png" style="width:192px" alt="Luchador skeleton"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_23.png" style="width:192px" alt="Four-armed mushroom"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_24.png" style="width:192px" alt="Hermit frog"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_25.png" style="width:192px" alt="Sunburnt lizard"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_26.png" style="width:192px" alt="Cactus brothers"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_27.png" style="width:192px" alt="Wrestling sheep"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_28.png" style="width:192px" alt="Screaming bat"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_29.png" style="width:192px" alt="Snake oil salesman"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_30.png" style="width:192px" alt="Fire bird"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_31.png" style="width:192px" alt="Cactus pillar"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_32.png" style="width:192px" alt="Gasping fish"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_33.png" style="width:192px" alt="Massive tornado"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_34.png" style="width:192px" alt="Jack-in-the-box"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_35.png" style="width:192px" alt="Red dragon"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_36.png" style="width:192px" alt="Beast with a mountain on its back"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_37.png" style="width:192px" alt="Red clay man"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_38.png" style="width:192px" alt="Green man in robe"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_39.png" style="width:192px" alt="Linoleum eyeball with a 'stache"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_40.png" style="width:192px" alt="Red troll"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_41.png" style="width:192px" alt="Slimy wiry creature"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_42.png" style="width:192px" alt="Floating clay eye"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_43.png" style="width:192px" alt="Thunder-head honcho"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_44.png" style="width:192px" alt="Creature made of fluff"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_45.png" style="width:192px" alt="Massive hairy spider"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_46.png" style="width:192px" alt="Big clay owl"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_47.png" style="width:192px" alt="Storage robot"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_48.png" style="width:192px" alt="Skull spider"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_49.png" style="width:192px" alt="Ghoulish"></div>
+
+					<div class="mySlides"><img src="img/bookmonsters/sprite_a.png" style="width:192px" alt="Humanoid shadow monster"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_b.png" style="width:192px" alt="Bovine shadow monster"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_c.png" style="width:192px" alt="Eel shadow monster"></div>
+					<div class="mySlides"><img src="img/bookmonsters/sprite_d.png" style="width:192px" alt="Centaur shadow monster"></div>
+					<div class="mySlides"><a href="secret.html" style="cursor:help;">
+					<img src="img/bookmonsters/sprite_e.png" style="width:192px" alt="Skull shadow monster"></a>
+					</div>
+					
+				</div>
+<!--Monster descriptions-->
+				<div id="description">
+					<p id="descriptionparagraph" style="max-width: 13em;"></p>
+				</div>
+<!--Monster name-->
+				<div id="paragraph"></div>
+<!--Spacer for grid-->
+				<div id=spacer style="height: 100px;"></div>
+<!--Prev and next buttons-->
+				<a class="prev" style="margin-left: 48px; margin-top:80px;" onclick="plusSlides(-1);" aria-label="Previous image">&#10094;</a>
+				<a class="next" style="margin-right: 48px; margin-top:80px;" onclick="plusSlides(1);" aria-label="Next image">&#10095;</a>
+			</div>
+			</div>
+			</div>
+		
+			<div id=slideshow>
+<!--Monster numbers-->
+				<p class="idnumber">#01</p><p class="idnumber">#02</p><p class="idnumber">#03</p><p class="idnumber">#04</p>
+				<p class="idnumber">#05</p><p class="idnumber">#06</p><p class="idnumber">#07</p><p class="idnumber">#08</p>
+				<p class="idnumber">#09</p><p class="idnumber">#10</p><p class="idnumber">#11</p><p class="idnumber">#12</p>
+				<p class="idnumber">#13</p><p class="idnumber">#14</p><p class="idnumber">#15</p><p class="idnumber">#16</p>
+				<p class="idnumber">#17</p><p class="idnumber">#18</p><p class="idnumber">#19</p><p class="idnumber">#20</p>
+				<p class="idnumber">#21</p><p class="idnumber">#22</p><p class="idnumber">#23</p><p class="idnumber">#24</p>
+				<p class="idnumber">#25</p><p class="idnumber">#26</p><p class="idnumber">#27</p><p class="idnumber">#28</p>
+				<p class="idnumber">#29</p><p class="idnumber">#30</p><p class="idnumber">#31</p><p class="idnumber">#32</p>
+				<p class="idnumber">#33</p><p class="idnumber">#34</p><p class="idnumber">#35</p><p class="idnumber">#36</p>
+				<p class="idnumber">#37</p><p class="idnumber">#38</p><p class="idnumber">#39</p><p class="idnumber">#40</p>
+				<p class="idnumber">#41</p><p class="idnumber">#42</p><p class="idnumber">#43</p><p class="idnumber">#44</p>
+				<p class="idnumber">#45</p><p class="idnumber">#46</p><p class="idnumber">#47</p><p class="idnumber">#48</p>
+				<p class="idnumber">#49</p><p class="idnumber">#50</p><p class="idnumber">#51</p><p class="idnumber">#52</p>
+				<p class="idnumber">#53</p><p class="idnumber">#54</p><p class="idnumber">#55</p>
+<!--Monster names-->
+				<p class="name" style="display:none;">Volcanic&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">BigTurtle</p><p style="display:none;">
+				<p class="name" style="display:none;">TreeSpidr</p><p style="display:none;">
+				<p class="name" style="display:none;">DarkBunny</p><p style="display:none;">
+				<p class="name" style="display:none;">FloraDino</p><p style="display:none;">
+				<p class="name" style="display:none;">CarrotBoy</p><p style="display:none;">
+				<p class="name" style="display:none;">SkulSword</p><p style="display:none;">
+				<p class="name" style="display:none;">HeartBird</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Uproot&nbsp;&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">GiantYeti</p><p style="display:none;">
+				<p class="name" style="display:none;">BookShade</p><p style="display:none;">
+				<p class="name" style="display:none;">ClayHead&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">FakeSword</p><p style="display:none;">
+				<p class="name" style="display:none;">Gargoyle&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Lobster&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">BeeGrunt&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">BabyYeti&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">DryFlame&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">PinTurtle</p><p style="display:none;">
+				<p class="name" style="display:none;">BrainTree</p><p style="display:none;">
+				<p class="name" style="display:none;">Wrestler&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;&nbsp;&nbsp;Bug&nbsp;&nbsp;&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">SkulLucha</p><p style="display:none;">
+				<p class="name" style="display:none;">Mushroom&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">CaveFrog&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">BrnLizard</p><p style="display:none;">
+				<p class="name" style="display:none;">CactiBros</p><p style="display:none;">
+				<p class="name" style="display:none;">BigSheep&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">Screature</p><p style="display:none;">
+				<p class="name" style="display:none;">SaleSnake</p><p style="display:none;">
+				<p class="name" style="display:none;">Firebird&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">CactiPilr</p><p style="display:none;">
+				<p class="name" style="display:none;">GaspFish&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Tornado&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Cryptic&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">RedDragon</p><p style="display:none;">
+				<p class="name" style="display:none;">Fortress&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;ClayMan&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">AlienKing</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Watcher&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;&nbsp;Gnum&nbsp;&nbsp;&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Urchin&nbsp;&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;Arbiter&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">StormHead</p><p style="display:none;">
+				<p class="name" style="display:none;">Fluffster</p><p style="display:none;">
+				<p class="name" style="display:none;">KingSpidr</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;ClayOwl&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">GuardBot&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">SkulSpidr</p><p style="display:none;">
+				<p class="name" style="display:none;">Ghoulish&nbsp;</p><p style="display:none;">
+
+				<p class="name" style="display:none;">DarkShade</p><p style="display:none;">
+				<p class="name" style="display:none;">DarkMattr</p><p style="display:none;">
+				<p class="name" style="display:none;">&nbsp;DarkEel&nbsp;</p><p style="display:none;">
+				<p class="name" style="display:none;">DarkBeast</p><p style="display:none;">
+				<p class="name" style="display:none;">DarkSkull</p><p style="display:none;">
+
+<!--Monster description paragraphs-->			
+
+				<p class="descriptiontext" style="display:none;">Fire-proof. Lives in volcanoes and devours molten magma-rocks.</p>
+				<p class="descriptiontext" style="display:none;">Slow-going. Moves around in giant caverns where it eats rocks and bugs.</p>
+				<p class="descriptiontext" style="display:none;">Reclusive. Hunted close to extinction for its lumber and spider silk.</p>
+				<p class="descriptiontext" style="display:none;">Malevolent. Tricks people and steals their prized belongings from them.</p>
+				<p class="descriptiontext" style="display:none;">Heavy-weight. Drinks a lot of water and waddles about in random directions.</p>
+				<p class="descriptiontext" style="display:none;">Mischievous. Likes rock n' roll and sipping from a cold bottle of soda.</p>
+				<p class="descriptiontext" style="display:none;">Spookily rad. Is skilled with a blade and can run like the wind.</p>
+				<p class="descriptiontext" style="display:none;">Very rare. Builds its nests on top of roofs and is considered lucky.</p>
+				<p class="descriptiontext" style="display:none;">Light-weight. Floats limply in the air and entangles its prey with its roots.</p>
+				<p class="descriptiontext" style="display:none;">Frost-biter. Lives out a lonely life in ice caves in the frosty north.</p>
+				<p class="descriptiontext" style="display:none;">Frightening. A shadow that hides in books waiting for readers to find it.</p>
+				<p class="descriptiontext" style="display:none;">Extra-goopy. Slops around in mud-filled plains. Eats roots and small fish.</p>
+				<p class="descriptiontext" style="display:none;">Real phony. One of many fake swords-in-stones designed to trick heroes.</p>
+				<p class="descriptiontext" style="display:none;">Sculpted. Screams then leaps from roofs onto unsuspecting travelers.</p>
+				<p class="descriptiontext" style="display:none;">Territorial. Walks around on the bottom of the ocean picking fights.</p>
+				<p class="descriptiontext" style="display:none;">Low-level. Does the boring jobs such as cleaning and paperwork.</p>
+				<p class="descriptiontext" style="display:none;">Cold-proof. Hunts around through ice plains looking for lost hikers.</p>
+				<p class="descriptiontext" style="display:none;">Ghostly-fire. Sits alone in old castles. Its flames can't be blown out.</p>
+				<p class="descriptiontext" style="display:none;">Super-speedy. Runs on its long legs at speeds in excess of 60mph.</p>
+				<p class="descriptiontext" style="display:none;">Beast-brain. An experiment gone wrong. It attacks anything that moves.</p>
+				<p class="descriptiontext" style="display:none;">Executioner. Has never been beat, and is known for its black hood.</p>
+				<p class="descriptiontext" style="display:none;">Blank-starer. Can fly, but prefers to pad about on its own two feet.</p>
+				<p class="descriptiontext" style="display:none;">Theatrical. Pauses during fights to start chants of its stage name.</p>
+				<p class="descriptiontext" style="display:none;">Grabby-fungi. Dispenses clouds of toxic fumes to suffocate its prey.</p>
+				<p class="descriptiontext" style="display:none;">Froglodyte. Lives on tropical mountains and is visually challenged.</p>
+				<p class="descriptiontext" style="display:none;">Peely-skin. Stayed in the sun without a strong enough sun-tan lotion.</p>
+				<p class="descriptiontext" style="display:none;">Cacti-stack. A pair of siblings on the wrong side of the law.</p>
+				<p class="descriptiontext" style="display:none;">Boxing-champ. A huge fluffy sheep that's been training to be a heavyweight.</p>
+				<p class="descriptiontext" style="display:none;">Tricky-thief. Loves flying into peoples houses and taking their money.</p>
+				<p class="descriptiontext" style="display:none;">Serpentine. Sells his products for way more than they are worth.</p>
+				<p class="descriptiontext" style="display:none;">Spicy-fowl. Flutters through the air sending fire onto those below.</p>
+				<p class="descriptiontext" style="display:none;">Hide-n-seek. Likes to hide in plain sight, hoping to be left alone.</p>
+				<p class="descriptiontext" style="display:none;">Water-yeller. A strange fish with a tendency to scream very loudly.</p>
+				<p class="descriptiontext" style="display:none;">Atmospheric. A tornado thug with an attitude. Currently unemployed.</p>
+				<p class="descriptiontext" style="display:none;">Red-oddity. It is an extremely rare monster that collects shiny things.</p>
+				<p class="descriptiontext" style="display:none;">Aggressive. Can't fly, but can jump really far with its two legs.</p>
+				<p class="descriptiontext" style="display:none;">Impenetrable. A moving mountain that eats forests, towns, and castles.</p>
+				<p class="descriptiontext" style="display:none;">Red n' goopy. A clay soldier that will follow its leader anywhere.</p>
+				<p class="descriptiontext" style="display:none;">Kindly-royal. A green king with heart of gold. It is slightly brash.</p>
+				<p class="descriptiontext" style="display:none;">Odd-guardian. Was created out of old parts and has trouble talking.</p>
+				<p class="descriptiontext" style="display:none;">Empty-minded. Can only eat flowers. Gardeners think it's a pest.</p>
+				<p class="descriptiontext" style="display:none;">Sewer-slime. Hides in puddles and rises out to attack its prey.</p>
+				<p class="descriptiontext" style="display:none;">Pacifist-eye. A regal clay eyeball with a strong sense of justice.</p>
+				<p class="descriptiontext" style="display:none;">Thunder-head. It is the life of the party when it's not working.</p>
+				<p class="descriptiontext" style="display:none;">Silky-haired. Works as a guard from 6am-3pm. Wants to work from home.</p>
+				<p class="descriptiontext" style="display:none;">Reclusive. Thirsts for flesh and has a beautiful singing voice.</p>
+				<p class="descriptiontext" style="display:none;">Goopy-statue. It's too heavy to fly, so it just bounces in place.</p>
+				<p class="descriptiontext" style="display:none;">Out-of-date. Guardian of storage rooms. Writes books in its spare time.</p>
+				<p class="descriptiontext" style="display:none;">Trail-blazer. Ever on the move, it has no home and stops only to eat.</p>
+				<p class="descriptiontext" style="display:none;">Gloopy-ooze. Wrangles fish deep in the sewers. It's waiting for a world-record.</p>
+
+				<p class="descriptiontext" style="display:none;">Monstrous. Hunts in the dark shadows. A dark creature of legend.</p>
+				<p class="descriptiontext" style="display:none;">Consuming. Moves without making a sound. A dark creature of legend.</p>
+				<p class="descriptiontext" style="display:none;">Disastrous. Destroys fishing villages. A dark creature of legend.</p>
+				<p class="descriptiontext" style="display:none;">Calamitous. Flies low over villages at night. A dark creature of legend.</p>
+				<p class="descriptiontext" style="display:none;">Grotesque. A monster from the briny depths. A dark creature of legend.</p>
+			</div>
+
+			<div>
+
+				<p style="text-align:center; color:#706850; padding-top: 16px;" id="arrowtext">Press the left and right<br>arrow keys to change pages.</p>
+
+			</div>
+
+			<div id=bookpattern></div>
+
+		</main>
+
+	</div>
+
+		<footer>
+			<a href="index.html">Home page</a> &nbsp; <a href="book.html">Book page</a>
+			&nbsp; <a href="images.html">Images page</a> &nbsp; <a href="sounds.html">Sound page</a>
+			&nbsp; <a href="info.html">About page</a> &nbsp; <a href="contact.html">Contact page</a><br><br>
+			Copyright © 2023 PixelMonsterBestiary.com &nbsp; <a href="about:blank">examplesite@email.mail</a>
+		</footer>
+
+<!--Javascript and some CSS from W3Schools: https://www.w3schools.com/Css/css_image_gallery.asp-->
+
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function changeName() { 
+		let ArrayOfNames = document.getElementsByClassName("name");	
+		let p = document.getElementById("paragraph");		
+		let currentName = ArrayOfNames[slideIndex-1].textContent;		
+		p.textContent = currentName;			
+	}
+
+	function changeId() { 
+		let ArrayOfNames = document.getElementsByClassName("idnumber");	
+		let p = document.getElementById("id");		
+		let currentName = ArrayOfNames[slideIndex-1].textContent;		
+		p.textContent = currentName;			
+	}
+
+	function changeDescription() { 
+		let ArrayOfNames = document.getElementsByClassName("descriptiontext");	
+		let p = document.getElementById("descriptionparagraph");		
+		let currentName = ArrayOfNames[slideIndex-1].textContent;		
+		p.textContent = currentName;			
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let captionText = document.getElementById("caption");
+		if (localStorage.AmountOfSecretEnemies == null) {
+			localStorage.AmountOfSecretEnemies = 5;
+		}
+		if (n > slides.length - Number(localStorage.AmountOfSecretEnemies)) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = slides.length - Number(localStorage.AmountOfSecretEnemies);
+		}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slides[slideIndex-1].style.display = "block";
+		changeName();
+		changeId();
+		changeDescription()
+	}
+
+	function playAudio(n) {
+		var audio = new Audio('audio/monster' + slideIndex + '.mp3');
+		audio.play();
+	}
+
+	document.onkeyup = function(e) {
+		switch (e.keyCode) {
+ 			case 37:
+				plusSlides(-1);
+				break;
+			case 39:
+				plusSlides(1);
+ 				break;
+		}
+	}
+	function FoundSecret() {
+		if (localStorage.BookSecret == null) {
+			if (localStorage.FoundSecret1 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret1 = "Yes";
+				localStorage.AmountOfSecretEnemies = 4;
+			} else if (localStorage.FoundSecret2 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret2 = "Yes";
+				localStorage.AmountOfSecretEnemies = 3;
+			} else if (localStorage.FoundSecret3 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret3 = "Yes";
+				localStorage.AmountOfSecretEnemies = 2;
+			} else if (localStorage.FoundSecret4 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret4 = "Yes";
+				localStorage.AmountOfSecretEnemies = 1;
+			} else if (localStorage.FoundSecret5 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret5 = "Yes";
+				localStorage.AmountOfSecretEnemies = 0;
+			}
+			localStorage.BookSecret = 1;
+		}
+	}
+
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="monsterbestiary.css">
+	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+	<title>Pixel Monster Bestiary - Contact</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Pixel, Pixal, Pixel art, Creatures, Monsters, Contact, Email, E-mail, Bestiary">
+	<meta name="description" content="Contact the creator of this collection of pixel-art monsters with questions or concerns 
+	regarding usage, rights, or just to say hi!">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+
+<style>
+	input, textarea { border: 3px solid #706850;
+	background-color: #F8F8D0;
+	box-shadow: 1px 1px 5px #706850;
+	margin-bottom: 32px;
+	color: #000;
+	font-family: squarefont;
+	padding: 8px;
+	line-height: 1.3em;
+	}
+
+	input:hover, textarea:hover { background-color: #F8F8D9;
+	}
+
+	input:focus, textarea:focus {background-color: #F8F8F0;
+	}
+
+	input[type=submit] { padding: .4em 2em;
+		font-weight: bold;
+	}
+</style>
+
+
+</head>
+
+<body>
+
+		<header>
+				<a style="text-decoration:none;" href="index.html"><h1>Pixel Monster Bestiary</h1></a>
+		</header>
+		
+		<div id="wrapper">
+
+		<nav>
+			<div id="navsetup">
+			<a href="index.html">HOME</a>
+			<a href="book.html">BOOK</a>
+			<a href="images.html">IMAGES</a>
+			<a href="sounds.html">SOUNDS</a>
+			<a href="info.html">ABOUT</a></div>
+		</nav>
+
+		<main>
+			<div style="text-align:center; padding-top: 48px; font-size:1.2em;">
+				<noscript>This page will not function correctly without Javascript!</noscript>
+			</div>
+
+			<h1 style="background-color: #B0B090; padding: 30px 0; font-weight: bold; font-size: 2.5em;
+			border-style: solid; border-width: 4px 0 8px 0; border-color: #706850;">CONTACT ME</h1>
+
+			<p style="padding: 1em 10%;">If you would like to contact me to ask for permission to use my drawings, to make comments about
+			this website, or to just say 'hi', please enter your information below and I will try to get back to you as soon as I am able.</p>
+
+			<p style="text-align:center; font-size: 1em; color:#706850;">Required fields are marked with the * symbol.</p>
+
+			<form method="post"
+			 action="https://webdevbasics.net/scripts/pacific.php">
+			
+				<label for="myFName">*First Name: </label>
+				<input type="text" id="myFName" name="myFName" pattern="[a-zA-Z]+" required>
+				<label for="myLName">*Last Name: </label>
+				<input type="text" id="myLName" name="myLName" pattern="[a-zA-Z]+" required>
+				<label for="myEmail">*E&ndash;mail: </label>
+				<input type="email" id="myEmail" name="myEmail" required>
+				<label for="myPhone">Phone (optional, ###-###-####):</label>
+				<input type="tel" id="myPhone" name="myPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+				<label for="myComments">*Reason for contact:</label>
+				<textarea id="myComments" style="color:#000;" name="myComments" rows="4" cols="20" required></textarea>
+				<p></p>
+				<input type="submit" id="mySubmit" value="Submit" style="margin:auto; margin-top:16px;">
+
+			</form>
+			<p style="font-size:.8em;">*Names cannot contain numbers or special characters<br>*E&ndash;mail address must contain the @ character</p>
+
+			<div id=contactpattern></div>
+
+		</main>
+
+	</div>
+
+		<footer>
+			<a href="index.html">Home page</a> &nbsp; <a href="book.html">Book page</a>
+			&nbsp; <a href="images.html">Images page</a> &nbsp; <a href="sounds.html">Sound page</a>
+			&nbsp; <a href="info.html">About page</a> &nbsp; <a href="contact.html">Contact page</a><br><br>
+			Copyright © 2023 PixelMonsterBestiary.com &nbsp; <a href="about:blank">examplesite@email.mail</a>
+		</footer>
+
+</body>
+
+</html>

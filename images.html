@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="monsterbestiary.css">
+	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+	<title>Pixel Monster Bestiary - Images</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Pixel, Pixal, Pixel art, Creatures, Monsters, Images, Pictures, Gallery, Bestiary">
+	<meta name="description" content="View a complete collection of pixel-art monsters side-by-side for easy comparison
+	in this gallery!">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0">
+
+<!--https://www.w3schools.com/js/js_cookies.asp-->
+
+<style>
+	div.gallery { border: 4px solid #B0B090;
+		margin-bottom: 16px;
+	}
+
+	div.gallery:hover { border: 4px solid #706850;
+	}
+
+	div.gallery img { width: 100%;
+		height: auto;
+		padding: 8px;
+	}
+
+	div.desc { padding: 15px;
+		text-align: center;
+		color: #000000;
+		background-color: #B0B090;
+	}
+
+	* { box-sizing: border-box;
+	}
+
+	.responsive { padding: 0 6px;
+		float: left;
+		width: 20%;
+	}
+
+	@media only screen and (max-width: 940px) {
+		.responsive { width: 33.33333333%;
+			margin: 6px 0;
+		}
+	}
+
+	@media only screen and (max-width: 624px) {
+		.responsive { width: 49.9999999%;
+		}
+	}
+
+	.clearfix:after { content: "";
+		display: table;
+		clear: both;
+	}
+</style>
+
+</head>
+
+<body onload="checkAll()">
+	<div>
+		
+		<header>
+				<a style="text-decoration:none;" href="index.html"><h1>Pixel Monster Bestiary</h1></a>
+		</header>
+
+	<div id="wrapper">
+
+		<nav>
+			<div id="navsetup">
+			<a href="index.html">HOME</a>
+			<a href="book.html">BOOK</a>
+			<a href="images.html">IMAGES</a>
+			<a href="sounds.html">SOUNDS</a>
+			<a href="info.html">ABOUT</a></div>
+		</nav>
+
+		<main onload="SetAmountOfSecrets()">
+			<div style="text-align:center; padding-top: 48px; font-size:1.2em;">
+				<noscript>This page will not function correctly without Javascript!</noscript>
+			</div>
+
+			<img id="runner" style="margin-bottom:-34px; padding:0" src="img/imagerunner.png" width="144" height="48" alt="Small book page example"
+			onclick="ShowRunnerAnimation();">
+
+			<h1 style="background-color: #B0B090; padding: 30px 0; font-weight: bold; font-size: 2.5em;
+			border-style: solid; border-width: 4px 0 8px 0; border-color: #706850;">MONSTER GALLERY</h1>
+
+
+		<!-- source: https://www.w3schools.com/csS/css_image_gallery.asp -->
+		<div id="container">
+
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_00.png"><img src="img/monsters/sprite_00.png" 
+				alt="Volcano man with no head" width="192" height="192"></a>
+				<div class="desc">Volcanic</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_01.png"><img src="img/monsters/sprite_01.png" 
+				alt="Massive spiky tortoise" width="192" height="192"></a>
+				<div class="desc">BigTurtle</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_02.png"><img src="img/monsters/sprite_02.png" 
+				alt="Tree Spider" width="192" height="192"></a>
+				<div class="desc">TreeSpidr</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_03.png"><img src="img/monsters/sprite_03.png" 
+				alt="Humanoid rabbit" width="192" height="192"></a>
+				<div class="desc">DarkBunny</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_04.png"><img src="img/monsters/sprite_04.png" 
+				alt="Flower dinosaur" width="192" height="192"></a>
+				<div class="desc">FloraDino</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_05.png"><img src="img/monsters/sprite_05.png" 
+				alt="Carrot thug" width="192" height="192"></a>
+				<div class="desc">CarrotBoy</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_06.png"><img src="img/monsters/sprite_06.png" 
+				alt="Skeleton with two swords" width="192" height="192"></a>
+				<div class="desc">SkulSword</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_07.png"><img src="img/monsters/sprite_07.png" 
+				alt="Bird with a heart on its head" width="192" height="192"></a>
+				<div class="desc">HeartBird</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_08.png"><img src="img/monsters/sprite_08.png" 
+				alt="Floating grass-patch" width="192" height="192"></a>
+				<div class="desc">Uproot</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_09.png"><img src="img/monsters/sprite_09.png" 
+				alt="Giant yeti" width="192" height="192"></a>
+				<div class="desc">GiantYeti</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_10.png"><img src="img/monsters/sprite_10.png" 
+				alt="Shadow holding a book" width="192" height="192"></a>
+				<div class="desc">BookShade</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_11.png"><img src="img/monsters/sprite_11.png" 
+				alt="Goopi clay head with fists" width="192" height="192"></a>
+				<div class="desc">ClayHead</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_12.png"><img src="img/monsters/sprite_12.png" 
+				alt="Sword in a evil looking stone" width="192" height="192"></a>
+				<div class="desc">FakeSword</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_13.png"><img src="img/monsters/sprite_13.png" 
+				alt="Raptor-like gargoyle" width="192" height="192"></a>
+				<div class="desc">Gargoyle</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_14.png"><img src="img/monsters/sprite_14.png" 
+				alt="Buff lobster man" width="192" height="192"></a>
+				<div class="desc">Lobster</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_15.png"><img src="img/monsters/sprite_15.png" 
+				alt="Hovering bee guard" width="192" height="192"></a>
+				<div class="desc">BeeGrunt</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_16.png"><img src="img/monsters/sprite_16.png" 
+				alt="Baby yeti" width="192" height="192"></a>
+				<div class="desc">BabyYeti</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_17.png"><img src="img/monsters/sprite_17.png" 
+				alt="Candelabra with a face" width="192" height="192"></a>
+				<div class="desc">DryFlame</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_18.png"><img src="img/monsters/sprite_18.png" 
+				alt="Spiny turtle with long legs" width="192" height="192"></a>
+				<div class="desc">PinTurtle</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_19.png"><img src="img/monsters/sprite_19.png" 
+				alt="Brain-like tree spider" width="192" height="192"></a>
+				<div class="desc">BrainTree</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_20.png"><img src="img/monsters/sprite_20.png" 
+				alt="Wrestler with a executioners hood" width="192" height="192"></a>
+				<div class="desc">Wrestler</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_21.png"><img src="img/monsters/sprite_21.png" 
+				alt="Little innocent-looking bug" width="192" height="192"></a>
+				<div class="desc">Bug</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_22.png"><img src="img/monsters/sprite_22.png" 
+				alt="Luchador skeleton" width="192" height="192"></a>
+				<div class="desc">SkulLucha</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_23.png"><img src="img/monsters/sprite_23.png" 
+				alt="Four-armed mushroom" width="192" height="192"></a>
+				<div class="desc">Mushroom</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_24.png"><img src="img/monsters/sprite_24.png" 
+				alt="Hermit frog" width="192" height="192"></a>
+				<div class="desc">CaveFrog</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_25.png"><img src="img/monsters/sprite_25.png" 
+				alt="Sunburnt lizard" width="192" height="192"></a>
+				<div class="desc">BrnLizard</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_26.png"><img src="img/monsters/sprite_26.png" 
+				alt="Cactus brothers" width="192" height="192"></a>
+				<div class="desc">CactiBros</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_27.png"><img src="img/monsters/sprite_27.png" 
+				alt="Wrestling sheep" width="192" height="192"></a>
+				<div class="desc">BigSheep</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_28.png"><img src="img/monsters/sprite_28.png" 
+				alt="Screaming bat" width="192" height="192"></a>
+				<div class="desc">Screature</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_29.png"><img src="img/monsters/sprite_29.png" 
+				alt="Snake oil salesman" width="192" height="192"></a>
+				<div class="desc">SaleSnake</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_30.png"><img src="img/monsters/sprite_30.png" 
+				alt="Fire bird" width="192" height="192"></a>
+				<div class="desc">Firebird</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_31.png"><img src="img/monsters/sprite_31.png" 
+				alt="Cactus pillar" width="192" height="192"></a>
+				<div class="desc">CactiPilr</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_32.png"><img src="img/monsters/sprite_32.png" 
+				alt="Gasping fish" width="192" height="192"></a>
+				<div class="desc">GaspFish</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_33.png"><img src="img/monsters/sprite_33.png" 
+				alt="Massive tornado" width="192" height="192"></a>
+				<div class="desc">Tornado</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_34.png"><img src="img/monsters/sprite_34.png" 
+				alt="Jack-in-the-box" width="192" height="192"></a>
+				<div class="desc">Cryptic</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_35.png"><img src="img/monsters/sprite_35.png" 
+				alt="Red dragon" width="192" height="192"></a>
+				<div class="desc">RedDragon</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_36.png"><img src="img/monsters/sprite_36.png" 
+				alt="Beast with a mountain on its back" width="192" height="192"></a>
+				<div class="desc">Fortress</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_37.png"><img src="img/monsters/sprite_37.png" 
+				alt="Red clay man" width="192" height="192"></a>
+				<div class="desc">Clayman</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_38.png"><img src="img/monsters/sprite_38.png" 
+				alt="Green man in robe" width="192" height="192"></a>
+				<div class="desc">AlienKing</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_39.png"><img src="img/monsters/sprite_39.png" 
+				alt="Linoleum eyeball with a 'stache" width="192" height="192"></a>
+				<div class="desc">Watcher</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_40.png"><img src="img/monsters/sprite_40.png" 
+				alt="Red troll" width="192" height="192"></a>
+				<div class="desc">Gnum</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_41.png"><img src="img/monsters/sprite_41.png" 
+				alt="Slimy wiry creature" width="192" height="192"></a>
+				<div class="desc">Urchin</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_42.png"><img src="img/monsters/sprite_42.png" 
+				alt="Floating clay eye" width="192" height="192"></a>
+				<div class="desc">Arbiter</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_43.png"><img src="img/monsters/sprite_43.png" 
+				alt="Thunder-head honcho" width="192" height="192"></a>
+				<div class="desc">StormHead</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_44.png"><img src="img/monsters/sprite_44.png" 
+				alt="Creature made of fluff" width="192" height="192"></a>
+				<div class="desc">Fluffster</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_45.png"><img src="img/monsters/sprite_45.png" 
+				alt="Massive hairy spider" width="192" height="192"></a>
+				<div class="desc">KingSpidr</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_46.png"><img src="img/monsters/sprite_46.png" 
+				alt="Big clay owl" width="192" height="192"></a>
+				<div class="desc">ClayOwl</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_47.png"><img src="img/monsters/sprite_47.png" 
+				alt="Storage robot" width="192" height="192"></a>
+				<div class="desc">GuardBot</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_48.png"><img src="img/monsters/sprite_48.png" 
+				alt="Skull spider" width="192" height="192"></a>
+				<div class="desc">SkulSpidr</div>
+				</div>
+			</div>
+			<div class="responsive">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_49.png"><img src="img/monsters/sprite_49.png" 
+				alt="Green ooze with four arms" width="192" height="192"></a>
+				<div class="desc">Ghoulish</div>
+				</div>
+			</div>
+
+<!--Secret enemies-->
+
+			<div class="responsive" id="FirstSecretEnemy" style="display:none;">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_a.png"><img src="img/monsters/sprite_a.png" 
+				alt="Secret monster #1" width="192" height="192"></a>
+				<div class="desc">DarkShade</div>
+				</div>
+			</div>
+			<div class="responsive" id="SecondSecretEnemy" style="display:none;">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_b.png"><img src="img/monsters/sprite_b.png" 
+				alt="Secret monster #2" width="192" height="192"></a>
+				<div class="desc">DarkMattr</div>
+				</div>
+			</div>
+			<div class="responsive" id="ThirdSecretEnemy" style="display:none;">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_c.png"><img src="img/monsters/sprite_c.png" 
+				alt="Secret monster #3" width="192" height="192"></a>
+				<div class="desc">DarkEel</div>
+				</div>
+			</div>
+			<div class="responsive" id="FourthSecretEnemy" style="display:none;">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_d.png"><img src="img/monsters/sprite_d.png" 
+				alt="Secret monster #4" width="192" height="192"></a>
+				<div class="desc">DarkBeast</div>
+				</div>
+			</div>
+			<div class="responsive" id="FifthSecretEnemy" style="display:none;">
+				<div class="gallery">
+				<a target="_blank" href="img/monsters/sprite_e.png"><img src="img/monsters/sprite_e.png" 
+				alt="Secret monster #5" width="192" height="192"></a>
+				<div class="desc">DarkSkull</div>
+				</div>
+			</div>
+			<div class="responsive" id="Secret" style="display:none;">
+				<div class="gallery">
+				<img src="img/bookmonsters/sprite_f.png" 
+				alt="The Lost" width="192" height="192">
+				<div class="desc">TheLost</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div id=imagesquare></div>
+
+		</main>
+
+	</div>
+
+		<footer>
+			<a href="index.html">Home page</a> &nbsp; <a href="book.html">Book page</a>
+			&nbsp; <a href="images.html">Images page</a> &nbsp; <a href="sounds.html">Sound page</a>
+			&nbsp; <a href="info.html">About page</a> &nbsp; <a href="contact.html">Contact page</a><br><br>
+			Copyright © 2023 PixelMonsterBestiary.com &nbsp; <a href="about:blank">examplesite@email.mail</a>
+		</footer>
+
+		
+	</div>
+
+<script>
+	function checkFirstSecret() {
+		if (localStorage.FoundSecret1) {
+			let SecretImage = document.getElementById("FirstSecretEnemy");
+			SecretImage.style.display = "block";
+		}
+	}
+	function checkSecondSecret() {
+		if (localStorage.FoundSecret2) {
+			let SecretImage2 = document.getElementById("SecondSecretEnemy");
+			SecretImage2.style.display = "block";
+		}
+	}
+	function checkThirdSecret() {
+		if (localStorage.FoundSecret3) {
+			let SecretImage3 = document.getElementById("ThirdSecretEnemy");
+			SecretImage3.style.display = "block";
+		}
+	}
+	function checkFourthSecret() {
+		if (localStorage.FoundSecret4) {
+			let SecretImage4 = document.getElementById("FourthSecretEnemy");
+			SecretImage4.style.display = "block";
+		}
+	}
+	function checkFifthSecret() {
+		if (localStorage.FoundSecret5) {
+			let SecretImage5 = document.getElementById("FifthSecretEnemy");
+			SecretImage5.style.display = "block";
+		}
+	}
+	function Secret() {
+		if (localStorage.FoundSecret) {
+			let SecretImage = document.getElementById("Secret");
+			SecretImage.style.display = "block";
+		}
+	}
+	function checkAll() {
+		checkFirstSecret();
+		checkSecondSecret();
+		checkThirdSecret();
+		checkFourthSecret();
+		checkFifthSecret();
+		Secret();
+	}
+	function SetAmountOfSecrets() {
+		if (localStorage.AmountOfSecretEnemies == null) {
+			localStorage.AmountOfSecretEnemies = 6;
+		}
+	}
+	var SawAnimation = 0;
+	function ShowRunnerAnimation() {
+		if (SawAnimation == 0) {
+			var image = document.getElementById("runner");
+			image.src = "img/imagerunner.gif";
+			SawAnimation = 1;
+		}
+	}
+</script>
+
+</body>
+
+</html>
