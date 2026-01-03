@@ -104,4 +104,35 @@
 
 </body>
 
+<script>
+	function FoundSecret() {
+		ShowAnimation('mountainpattern', 'img/homepattern.gif');
+		
+		if (localStorage.IndexSecret == null) {
+			if (localStorage.FoundSecret1 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret1 = "Yes";
+				localStorage.AmountOfSecretEnemies = 4;
+			} else if (localStorage.FoundSecret2 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret2 = "Yes";
+				localStorage.AmountOfSecretEnemies = 3;
+			} else if (localStorage.FoundSecret3 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret3 = "Yes";
+				localStorage.AmountOfSecretEnemies = 2;
+			} else if (localStorage.FoundSecret4 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret4 = "Yes";
+				localStorage.AmountOfSecretEnemies = 1;
+			} else if (localStorage.FoundSecret5 == null) {
+				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
+				localStorage.FoundSecret5 = "Yes";
+				localStorage.AmountOfSecretEnemies = 0;
+			}
+			localStorage.IndexSecret = 1;
+		}
+	}
+</script>
+
 </html>
