@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="monsterbestiary.css">
 	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
 	<title>Pixel Monster Bestiary</title>
+	<script src="script.js"></script>
 	<meta charset="utf-8">
 	<meta name="keywords" content="Pixel, Pixal, Pixel art, Creatures, Monsters, Monster Gallery, Bestiary">
 	<meta name="description" content="Enjoy viewing pixel-art creatures, reading their descriptions, and hearing the
@@ -11,28 +12,25 @@
 	<meta name="viewport"
 	content="width=device-width, initial-scale=1.0">
 
-<style>
-	table { width: 80%;
-		background-color: #F8F8D0;
-		margin: 64px auto;
-	}
-	
-	th a:link, th a:visited { color: #706850;
-	}
+	<style>
+		table { width: 80%;
+			background-color: #F8F8D0;
+			margin: 64px auto;
+		}
+		
+		th a:link, th a:visited { color: #706850;
+		}
 
-	th, td { border: none;
-		border-bottom: 3px dashed #706850;
-		letter-spacing: .05px;
-		color: #503808;
-	}
+		th, td { border: none;
+			border-bottom: 3px dashed #706850;
+			letter-spacing: .05px;
+			color: #503808;
+		}
 
-	td { margin: 0;
-		padding: 0;
-	}
-
-
-</style>
-
+		td { margin: 0;
+			padding: 0;
+		}
+	</style>
 
 </head>
 
@@ -68,27 +66,27 @@
 					<th>To enjoy reading through the Monster Book and to start learning more about the fascinating 
 					monsters in there, head over to the <a href="book.html">BOOK</a> page!</th>
 					<td><img id="examplebook" src="img/booksmall.png" width="128" height="128" alt="Small book page example"
-					onclick="ShowBookAnimation();"></td>
+					onclick="ShowAnimation('examplebook', 'img/booksmall.gif');"></td>
 				</tr>
 				<tr>
 					<th>Look at all fifty monster images side-by-side for comparison in the <a href="images.html">IMAGES</a> page!</th>
 					<td><img id="exampleimage" src="img/imagesmall.png" width="128" height="128" alt="Small image page example" 
-					onclick="ShowImageAnimation();"></td>
+					onclick="ShowAnimation('exampleimage', 'img/imagesmall.gif');"></td>
 				</tr>
 				<tr>
 					<th>Listen to a selection of fifty different monster sounds on the <a href="sounds.html">SOUNDS</a> page!</th>
 					<td><img id="examplesound" src="img/soundsmall.png" width="128" height="128" alt="Small sound page example"
-					onclick="ShowSoundAnimation();"></td>
+					onclick="ShowAnimation('examplesound', 'img/soundsmall.gif');"></td>
 				</tr>
 				<tr>
 					<th>Read frequently asked questions and their frequently received answers in the <a href="info.html">INFO</a> page!</th>
 					<td><img id="exampleinfo" src="img/infosmall.png" width="128" height="128" alt="Small info page example"
-					onclick="ShowInfoAnimation();"></td>
+					onclick="ShowAnimation('exampleinfo', 'img/infosmall.gif');"></td>
 				</tr>
 			</table>
 
 			<div id=hometriangle>
-			<img src="img/homepattern.png" id="mountainpattern" width="48" height="48" onclick="FoundSecret()" alt="Rubbery mountain">
+			<img src="img/homepattern.png" id="mountainpattern" width="48" height="48" onclick="FoundSecret(0)" alt="Rubbery mountain">
 			</div>
 
 			<a href="#coffee" style="color:#B0B090; margin-left:8px; font-size:.8em;" id="coffee" onclick="coffeeOrder()">Buy me a coffee</a>
@@ -103,60 +101,6 @@
 			&nbsp; <a href="info.html">About page</a> &nbsp; <a href="contact.html">Contact page</a><br><br>
 			Copyright © 2023 PixelMonsterBestiary.com &nbsp; <a href="about:blank">examplesite@email.mail</a>
 		</footer>
-
-<script>
-	function ShowBookAnimation() {
-		var image = document.getElementById("examplebook");
-		image.src = "img/booksmall.gif";
-	}
-	function ShowImageAnimation() {
-		var image = document.getElementById("exampleimage");
-		image.src = "img/imagesmall.gif";
-	}
-	function ShowSoundAnimation() {
-		var image = document.getElementById("examplesound");
-		image.src = "img/soundsmall.gif";
-	}
-	function ShowInfoAnimation() {
-		var image = document.getElementById("exampleinfo");
-		image.src = "img/infosmall.gif";
-	}
-	function ShowMountainAnimation() {
-		var image = document.getElementById("mountainpattern");
-		image.src = "img/homepattern.gif";
-	}
-	function coffeeOrder() {
-		alert("If you could just grab me a cup of coffee with caramel, creamer, and two spoons of sugar, that'd be great.\n\n~Website Creator");
-	}
-	function FoundSecret() {
-		ShowMountainAnimation();
-		if (localStorage.IndexSecret == null) {
-			if (localStorage.FoundSecret1 == null) {
-				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
-				localStorage.FoundSecret1 = "Yes";
-				localStorage.AmountOfSecretEnemies = 4;
-			} else if (localStorage.FoundSecret2 == null) {
-				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
-				localStorage.FoundSecret2 = "Yes";
-				localStorage.AmountOfSecretEnemies = 3;
-			} else if (localStorage.FoundSecret3 == null) {
-				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
-				localStorage.FoundSecret3 = "Yes";
-				localStorage.AmountOfSecretEnemies = 2;
-			} else if (localStorage.FoundSecret4 == null) {
-				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
-				localStorage.FoundSecret4 = "Yes";
-				localStorage.AmountOfSecretEnemies = 1;
-			} else if (localStorage.FoundSecret5 == null) {
-				alert("You found a Secret Monster!\n\nYou can view it in the BOOK, IMAGES, and SOUNDS pages!");
-				localStorage.FoundSecret5 = "Yes";
-				localStorage.AmountOfSecretEnemies = 0;
-			}
-			localStorage.IndexSecret = 1;
-		}
-	}
-
-</script>
 
 </body>
 
