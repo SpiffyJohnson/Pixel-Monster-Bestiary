@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="monsterbestiary.css">
+	<script src="script.js"></script>
 	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
 	<title>Pixel Monster Bestiary - Book</title>
 	<meta charset="utf-8">
@@ -402,74 +403,8 @@
 
 <script>
 	let slideIndex = 1;
-	showSlides(slideIndex);
+	showSlides(slideIndex, "book");
 
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	function changeName() { 
-		let ArrayOfNames = document.getElementsByClassName("name");	
-		let p = document.getElementById("paragraph");		
-		let currentName = ArrayOfNames[slideIndex-1].textContent;		
-		p.textContent = currentName;			
-	}
-
-	function changeId() { 
-		let ArrayOfNames = document.getElementsByClassName("idnumber");	
-		let p = document.getElementById("id");		
-		let currentName = ArrayOfNames[slideIndex-1].textContent;		
-		p.textContent = currentName;			
-	}
-
-	function changeDescription() { 
-		let ArrayOfNames = document.getElementsByClassName("descriptiontext");	
-		let p = document.getElementById("descriptionparagraph");		
-		let currentName = ArrayOfNames[slideIndex-1].textContent;		
-		p.textContent = currentName;			
-	}
-
-	function showSlides(n) {
-		let i;
-		let slides = document.getElementsByClassName("mySlides");
-		let captionText = document.getElementById("caption");
-		if (localStorage.AmountOfSecretEnemies == null) {
-			localStorage.AmountOfSecretEnemies = 5;
-		}
-		if (n > slides.length - Number(localStorage.AmountOfSecretEnemies)) {
-			slideIndex = 1;
-		}
-		if (n < 1) {
-			slideIndex = slides.length - Number(localStorage.AmountOfSecretEnemies);
-		}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		slides[slideIndex-1].style.display = "block";
-		changeName();
-		changeId();
-		changeDescription()
-	}
-
-	function playAudio(n) {
-		var audio = new Audio('audio/monster' + slideIndex + '.mp3');
-		audio.play();
-	}
-
-	document.onkeyup = function(e) {
-		switch (e.keyCode) {
- 			case 37:
-				plusSlides(-1);
-				break;
-			case 39:
-				plusSlides(1);
- 				break;
-		}
-	}
 	function FoundSecret() {
 		if (localStorage.BookSecret == null) {
 			if (localStorage.FoundSecret1 == null) {

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="monsterbestiary.css">
+	<script src="script.js"></script>
 	<link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
 	<title>Pixel Monster Bestiary - Images</title>
 	<meta charset="utf-8">
@@ -506,66 +507,6 @@
 
 		
 	</div>
-
-<script>
-	function checkFirstSecret() {
-		if (localStorage.FoundSecret1) {
-			let SecretImage = document.getElementById("FirstSecretEnemy");
-			SecretImage.style.display = "block";
-		}
-	}
-	function checkSecondSecret() {
-		if (localStorage.FoundSecret2) {
-			let SecretImage2 = document.getElementById("SecondSecretEnemy");
-			SecretImage2.style.display = "block";
-		}
-	}
-	function checkThirdSecret() {
-		if (localStorage.FoundSecret3) {
-			let SecretImage3 = document.getElementById("ThirdSecretEnemy");
-			SecretImage3.style.display = "block";
-		}
-	}
-	function checkFourthSecret() {
-		if (localStorage.FoundSecret4) {
-			let SecretImage4 = document.getElementById("FourthSecretEnemy");
-			SecretImage4.style.display = "block";
-		}
-	}
-	function checkFifthSecret() {
-		if (localStorage.FoundSecret5) {
-			let SecretImage5 = document.getElementById("FifthSecretEnemy");
-			SecretImage5.style.display = "block";
-		}
-	}
-	function Secret() {
-		if (localStorage.FoundSecret) {
-			let SecretImage = document.getElementById("Secret");
-			SecretImage.style.display = "block";
-		}
-	}
-	function checkAll() {
-		checkFirstSecret();
-		checkSecondSecret();
-		checkThirdSecret();
-		checkFourthSecret();
-		checkFifthSecret();
-		Secret();
-	}
-	function SetAmountOfSecrets() {
-		if (localStorage.AmountOfSecretEnemies == null) {
-			localStorage.AmountOfSecretEnemies = 6;
-		}
-	}
-	var SawAnimation = 0;
-	function ShowRunnerAnimation() {
-		if (SawAnimation == 0) {
-			var image = document.getElementById("runner");
-			image.src = "img/imagerunner.gif";
-			SawAnimation = 1;
-		}
-	}
-</script>
 
 </body>
 
