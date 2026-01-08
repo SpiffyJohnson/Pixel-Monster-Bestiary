@@ -105,11 +105,11 @@ function showSlides(n, page) {
     if (localStorage.AmountOfSecretEnemies == null) {
         localStorage.AmountOfSecretEnemies = 5;
     }
-    if (n > slides.length - Number(localStorage.AmountOfSecretEnemies)) {
+    if (n > slides.length - Number(localStorage.AmountOfSecretEnemies) - 1) {
         slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length - Number(localStorage.AmountOfSecretEnemies);
+        slideIndex = slides.length - Number(localStorage.AmountOfSecretEnemies) - 1;
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -120,7 +120,7 @@ function showSlides(n, page) {
     else if (page = "book") {
         changeName();
 		changeId();
-		changeDescription()
+		changeDescription();
     }
 
 }
