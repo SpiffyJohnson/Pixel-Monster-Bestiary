@@ -1,6 +1,6 @@
 <h1 align="center"><b>Pixel-Monster-Bestiary</b></h1>
 
-An online bestiary for displaying the art, sounds, and descriptions of some of my personal pixel-art creatures. The site consists of seven web pages, across which over 140 custom images are arranged. 
+An online bestiary for displaying the art, sounds, and descriptions of some of my personal pixel-art creatures. The site consists of 7 web pages, across which over 140 custom images are arranged. 
 <p align="center"><img src="https://github.com/SpiffyJohnson/Pixel-Monster-Bestiary/blob/main/img/monsters/sprite_21.png"></p>
 
 
